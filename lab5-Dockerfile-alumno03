@@ -1,0 +1,7 @@
+FROM dd150e5400f1a756b7752931d3064a57f529325b74e18d56bc0a4e08adbf95f0
+COPY "C:\Users\josea\OneDrive\Escritorio\Máster Bioinformática\6. Computación en la Nube\Lab3\lab3-python\pi.ipynb" /app/pi.ipynb
+WORKDIR /app
+RUN pip install jupyter
+RUN pip install numpy
+RUN pip install numba
+CMD ["ipython", "/app/pi.ipynb", "10**5"]
